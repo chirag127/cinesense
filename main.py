@@ -1,18 +1,33 @@
+# import libraries
 import numpy as np
 import pandas as pd
-from flask import Flask, render_template, request
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-import json
 import bs4 as bs
 import urllib.request
 import pickle
 import requests
 
+# import flask
+from flask import Flask, render_template, request
+
+# import sklearn
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
 # load the nlp model and tfidf vectorizer from disk
 filename = 'nlp_model.pkl'
-clf = pickle.load(open(filename, 'rb'))
-vectorizer = pickle.load(open('tranform.pkl','rb'))
+try:
+    # load the model from disk
+    clf = pickle.load(open(filename, 'rb'))
+except IOError:
+    print('Model file not found')
+    exit()
+try:
+
+    # load the model from disk
+    vectorizer = pickle.load(open('tranform.pkl','rb'))
+except IOError:
+    print('Tfidf vectorizer file not found')
+    exit()
 
 def create_similarity():
     data = pd.read_csv('main_data.csv')
@@ -42,7 +57,7 @@ def rcmd(m):
             a = lst[i][0]
             l.append(data['movie_title'][a])
         return l
-    
+
 # converting list of string to list (eg. "["abc","def"]" to ["abc","def"])
 def convert_to_list(my_list):
     my_list = my_list.split('","')
@@ -107,19 +122,19 @@ def recommend():
     cast_bdays = convert_to_list(cast_bdays)
     cast_bios = convert_to_list(cast_bios)
     cast_places = convert_to_list(cast_places)
-    
+
     # convert string to list (eg. "[1,2,3]" to [1,2,3])
     cast_ids = cast_ids.split(',')
     cast_ids[0] = cast_ids[0].replace("[","")
     cast_ids[-1] = cast_ids[-1].replace("]","")
-    
+
     # rendering the string to python string
     for i in range(len(cast_bios)):
         cast_bios[i] = cast_bios[i].replace(r'\n', '\n').replace(r'\"','\"')
-    
+
     # combining multiple lists as a dictionary which can be passed to the html file so that it can be processed easily and the order of information will be preserved
     movie_cards = {rec_posters[i]: rec_movies[i] for i in range(len(rec_posters))}
-    
+
     casts = {cast_names[i]:[cast_ids[i], cast_chars[i], cast_profiles[i]] for i in range(len(cast_profiles))}
 
     cast_details = {cast_names[i]:[cast_ids[i], cast_profiles[i], cast_bdays[i], cast_places[i], cast_bios[i]] for i in range(len(cast_places))}
@@ -141,7 +156,7 @@ def recommend():
             reviews_status.append('Good' if pred else 'Bad')
 
     # combining reviews and comments into a dictionary
-    movie_reviews = {reviews_list[i]: reviews_status[i] for i in range(len(reviews_list))}     
+    movie_reviews = {reviews_list[i]: reviews_status[i] for i in range(len(reviews_list))}
 
     # passing all the data to the html file
     return render_template('recommend.html',title=title,poster=poster,overview=overview,vote_average=vote_average,

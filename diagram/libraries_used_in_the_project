@@ -1,0 +1,13 @@
+digraph "Libraries used in the project" {
+	graph [fontcolor="#2D3436" fontname="Sans-Serif" fontsize=15 label="Libraries used in the project" nodesep=0.60 pad=2.0 rankdir=LR ranksep=0.75 splines=ortho]
+	node [fixedsize=true fontcolor="#2D3436" fontname="Sans-Serif" fontsize=13 height=1.4 imagescale=true labelloc=b shape=box style=rounded width=1.4]
+	edge [color="#7B8894"]
+	subgraph cluster_Libraries {
+		graph [bgcolor="#E5F5FD" fontname="Sans-Serif" fontsize=12 label=Libraries labeljust=l pencolor="#AEB6BE" rankdir=LR shape=box style=rounded]
+		"7cd709b29a39459ca1cec45e9b673e90" [label=Pandas height=1.9 image="/home/codespace/.python/current/lib/python3.10/site-packages/resources/digitalocean/compute/droplet.png" shape=none]
+		"76db2ac923a9448caccb9b3f174a455d" [label=Numpy height=1.9 image="/home/codespace/.python/current/lib/python3.10/site-packages/resources/digitalocean/compute/droplet.png" shape=none]
+		"68b762eec9b848ea92ab0c7a5710e97a" [label=Nltk height=1.9 image="/home/codespace/.python/current/lib/python3.10/site-packages/resources/digitalocean/compute/droplet.png" shape=none]
+		"0382603c468142a5b930e84d044acee3" [label=Sklearn height=1.9 image="/home/codespace/.python/current/lib/python3.10/site-packages/resources/digitalocean/compute/droplet.png" shape=none]
+		"5f6b058ee7374d839f2c2c1cb93e6e7f" [label=Pickle height=1.9 image="/home/codespace/.python/current/lib/python3.10/site-packages/resources/digitalocean/compute/droplet.png" shape=none]
+	}
+}
