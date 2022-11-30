@@ -1,8 +1,6 @@
-<centre><h1>MOVIE RECOMMENDATIONS SYSTEM<h1><h2>Chirag Singhal, RKGIT
-
-</h2>
-<h2>Ashutosh Maurya, RKGIT
-</h2>
+<centre>
+  <h1>MOVIE RECOMMENDATIONS SYSTEM</h1>
+  <h2>Chirag Singhal, RKGIT</h2>
 
 </centre>
 
@@ -32,6 +30,8 @@ Collaborative recommender systems, on the other hand, create recommendations bas
 Hybrid recommender systems combine the content-based and collaborative approaches in order to overcome the limitations of each. However, these systems are generally more complex and require more data in order to work effectively.
 
 Current recommender systems have limitations in terms of understanding of users and items, incorporation of contextual information, support for multcriteria ratings, and provision of more flexible and less intrusive recommendations. However, these limitations can be overcome by extensions to current recommender methods, such as incorporation of user feedback, use of content-based methods to supplement collaborative methods, use of hybrid methods that combine content-based and collaborative approaches, and use of context-aware methods that take into account the user's current situation.
+
+<div style="page-break-before:always"></div>
 
 ## 1.2. Introduction
 
@@ -159,6 +159,8 @@ The model gives recommendations based on the genre, director, and top 3 casts of
 ## 1.7. Conclusion
 
 We observed that collaborative and content-basedrecommendation systems are non robust, hard to handle and computationally complex since it studies a large number of user preferences. Combining both content and collaborative recommendation methods improve recommendation quality and provide more customized recommendations. Content-based approach directly correlates with a user preference whereas, items with similar characteristics to the content of the items being recommended are recommended. Collaborativerecommendation systems learn from past user behaviors, on the otherhand.The extension of the current recommendationsystem further takes contextual information into consideration, understands user and item knowledge and at the same time, provides more flexible and less intrusive recommendations. Such a system can provide facility to users for indirect interaction that is not possible for many standard recommender systems and at the same time, promotes online discussion and learning among the users. This further enables individual recommendation providers to build an online community of niche interests.
+
+<div style="page-break-before:always"></div>
 
 ### All avalible movie recomendation methods and approaches
 

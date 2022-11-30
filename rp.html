@@ -365,10 +365,9 @@ code {
           : 'default'
     });
   </script>
-<p><centre><h1>MOVIE RECOMMENDATIONS SYSTEM<h1><h2>Chirag Singhal, RKGIT</p>
-</h2>
-<h2>Ashutosh Maurya, RKGIT
-</h2>
+<centre>
+  <h1>MOVIE RECOMMENDATIONS SYSTEM</h1>
+  <h2>Chirag Singhal, RKGIT</h2>
 </centre>
 <ul>
 <li><a href="#11-abstract">1.1. Abstract</a></li>
@@ -401,6 +400,7 @@ code {
 <p>Collaborative recommender systems, on the other hand, create recommendations based on the similarity between the users' ratings of the items being recommended. These systems are more flexible and can work with less well-defined user preferences. However, they are often subject to the &quot;cold start&quot; problem, wherein the system has difficulty making recommendations for new users or items.</p>
 <p>Hybrid recommender systems combine the content-based and collaborative approaches in order to overcome the limitations of each. However, these systems are generally more complex and require more data in order to work effectively.</p>
 <p>Current recommender systems have limitations in terms of understanding of users and items, incorporation of contextual information, support for multcriteria ratings, and provision of more flexible and less intrusive recommendations. However, these limitations can be overcome by extensions to current recommender methods, such as incorporation of user feedback, use of content-based methods to supplement collaborative methods, use of hybrid methods that combine content-based and collaborative approaches, and use of context-aware methods that take into account the user's current situation.</p>
+<div style="page-break-before:always"></div>
 <h2 id="12-introduction">1.2. Introduction</h2>
 <p>The main objective of this paper is to recommend movies to the user based on the content of the movie. The content-based filtering system is used to recommend movies. The main parameters that are considered for the recommendations are the genre, director, and top 3 casts. The details of the movies, such as title, genre, runtime, rating, poster, casts, etc., are fetched from TMDB. The reviews of each individual movie given by the users are &quot;web-scraped&quot; from the IMDB website with the help of beautifulsoup4, and the reviews are subjected to sentiment analysis, where the model predicts whether the review is positive or negative.</p>
 <p>A recommendation system is a system that is used to predict the rating or preference a user would give to an item.The main objective of a recommendation system is to get to know the user intentions and wants. A recommendation system helps in predicting what a user wants on the basis of the activity of the user and the activity of other users. There are different types of recommendation systems; we will be focusing on content-based filtering.</p>
@@ -529,6 +529,7 @@ This model was then fitted and predictions on other dataset were made.</p>
 <p>The model gives recommendations based on the genre, director, and top 3 casts of each movie. It is observed that if the genre of the movie and the genre that the user likes match, then the movie is recommended to the user. The model gives better recommendations as compared to other models.</p>
 <h2 id="17-conclusion">1.7. Conclusion</h2>
 <p>We observed that collaborative and content-basedrecommendation systems are non robust, hard to handle and computationally complex since it studies a large number of user preferences. Combining both content and collaborative recommendation methods improve recommendation quality and provide more customized recommendations. Content-based approach directly correlates with a user preference whereas, items with similar characteristics to the content of the items being recommended are recommended. Collaborativerecommendation systems learn from past user behaviors, on the otherhand.The extension of the current recommendationsystem further takes contextual information into consideration, understands user and item knowledge and at the same time, provides more flexible and less intrusive recommendations. Such a system can provide facility to users for indirect interaction that is not possible for many standard recommender systems and at the same time, promotes online discussion and learning among the users. This further enables individual recommendation providers to build an online community of niche interests.</p>
+<div style="page-break-before:always"></div>
 <h3 id="all-avalible-movie-recomendation-methods-and-approaches">All avalible movie recomendation methods and approaches</h3>
 <table>
 <thead>
