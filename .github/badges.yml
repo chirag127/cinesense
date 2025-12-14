@@ -1,0 +1,21 @@
+- name: Build Status
+  shield:
+    label: Build Status
+    message: Passing
+    color: success
+    style: flat-square
+  url: https://github.com/chirag127/CineSense-AI-Movie-Recommender-Web-App/actions/workflows/ci.yml
+- name: License
+  shield:
+    label: License
+    message: CC BY-NC 4.0
+    color: lightgrey
+    style: flat-square
+  url: https://creativecommons.org/licenses/by-nc/4.0/
+- name: Python Version
+  shield:
+    label: Python
+    message: 3.9
+    color: blue
+    style: flat-square
+  url: https://www.python.org/downloads/release/python-390/
