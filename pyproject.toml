@@ -1,0 +1,16 @@
+[project]
+name = "cinesense"
+version = "0.1.0"
+description = "A Flask-based web app that delivers AI-powered content-based movie recommendations and sentiment analysis of user reviews using TMDB data."
+authors = [{ name = "chirag127", email = "" }]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/chirag127/CineSense-AI-Movie-Recommender-Web-App"
+
+[tool.ruff]
+line-length = 88
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

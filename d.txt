@@ -1,9 +1,0 @@
-sudo apt update
-sudo apt upgrade -y
-sudo apt install -y graphviz
-pip3 --version
-mkdir my-diagram
-cd my-diagram
-echo -e "diagrams==0.21.1\ngraphviz==0.16" | tee requirements.txt
-cd my-diagram
-pip3 install -r requirements.txt
