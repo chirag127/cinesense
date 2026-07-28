@@ -1,77 +1,46 @@
-# CineSense-AI-Movie-Recommender-Web-App
+# CineSense
 
-[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg?style=flat-square)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![Python Version](https://img.shields.io/badge/python-3.9-blue.svg?style=flat-square)](https://www.python.org/downloads/release/python-390/)
-[![Flask](https://img.shields.io/badge/flask-2.0-blue.svg?style=flat-square)](https://flask.palletsprojects.com/en/2.0.x/)
+[![GitHub stars](https://img.shields.io/github/stars/chirag127/cinesense?style=flat-square)](https://github.com/chirag127/cinesense)
+[![License](https://img.shields.io/github/license/chirag127/cinesense?style=flat-square)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.9+-blue?style=flat-square)](https://python.org)
+[![GH Pages](https://img.shields.io/badge/site-live-brightgreen?style=flat-square)](https://chirag127.github.io/cinesense/)
 
-A Flask-based web app that delivers AI-powered content-based movie recommendations and sentiment analysis of user reviews using TMDB data.
+AI-powered movie recommendation web app. Content-based filtering + IMDb review sentiment analysis. Built with Flask, scikit-learn, TF-IDF.
 
-## ✨ Features
+## Live Site
 
--   **AI-Powered Recommendations:** Get personalized movie recommendations based on your favorite movies.
--   **Sentiment Analysis:** Understand the sentiment of user reviews with our NLP model.
--   **TMDB Data:** Utilizes the comprehensive TMDB dataset for accurate and up-to-date movie information.
--   **Interactive UI:** A user-friendly interface for a seamless experience.
+**https://chirag127.github.io/cinesense/**
 
-## 🚀 Installation & Usage
+## Features
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/chirag127/CineSense-AI-Movie-Recommender-Web-App.git
-    ```
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-3.  **Run the application:**
-    ```bash
-    python src/cinesense/web/app.py
-    ```
+- Content-based movie recommendations using TF-IDF + cosine similarity
+- Sentiment analysis of IMDb user reviews (Good/Bad classification)
+- TMDB dataset with poster images and cast details
+- Cached ML model loading (loaded once at startup)
 
-## 🌳 Architecture
+## Setup
 
-```
-.
-├── .github
-│   ├── ISSUE_TEMPLATE
-│   │   └── bug_report.md
-│   ├── workflows
-│   │   └── ci.yml
-│   └── PULL_REQUEST_TEMPLATE.md
-├── AGENTS.md
-├── CONTRIBUTING.md
-├── LICENSE
-├── PROPOSED_README.md
-├── README.md
-├── SECURITY.md
-├── datasets
-├── notebooks
-├── requirements.txt
-├── src
-│   ├── cinesense
-│   │   ├── __init__.py
-│   │   └── web
-│   │       ├── __init__.py
-│   │       └── app.py
-│   └── __init__.py
-├── static
-│   ├── autocomplete.js
-│   └── recommend.js
-└── templates
-    ├── home.html
-    └── recommend.html
+```bash
+pip install -r requirements.txt
+
+# Place model files in project root:
+# - nlp_model.pkl (sentiment classifier)
+# - tranform.pkl (TF-IDF vectorizer)
+# - main_data.csv (movie dataset)
+
+python src/cinesense/web/app.py
 ```
 
-## 🤝 Contributing
+## Architecture
 
-Contributions are welcome! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+```
+src/cinesense/web/app.py   Flask app + MovieRecommender class
+templates/                  Jinja2 HTML templates
+static/                     JS, CSS, images
+notebooks/                  Jupyter preprocessing notebooks
+datasets/                   Raw TMDB data
+```
 
-## 📝 License
+## License
 
-This project is licensed under the **CC BY-NC 4.0** License - see the [LICENSE](LICENSE) file for details.
-
----
-
-<p align="center">
-  <b>Star ⭐ this repo if you found it helpful!</b>
-</p>
+MIT

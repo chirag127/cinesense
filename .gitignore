@@ -23,8 +23,13 @@ build/
 # VSCode
 .vscode/
 
+# Logs
+app.log
+*.log
+
 # Other
 *.html
+!docs/*.html
 *.txt
 *.md
 *.png

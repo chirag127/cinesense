@@ -7,7 +7,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 
 [project.urls]
-Homepage = "https://github.com/chirag127/CineSense-AI-Movie-Recommender-Web-App"
+Homepage = "https://github.com/chirag127/cinesense"
 
 [tool.ruff]
 line-length = 88
