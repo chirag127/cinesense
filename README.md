@@ -3,13 +3,13 @@
 [![GitHub stars](https://img.shields.io/github/stars/chirag127/cinesense?style=flat-square)](https://github.com/chirag127/cinesense)
 [![License](https://img.shields.io/github/license/chirag127/cinesense?style=flat-square)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.9+-blue?style=flat-square)](https://python.org)
-[![GH Pages](https://img.shields.io/badge/site-live-brightgreen?style=flat-square)](https://chirag127.github.io/cinesense/)
+[![GH Pages](https://img.shields.io/badge/site-live-brightgreen?style=flat-square)](https://cinesense.oriz.in)
 
 AI-powered movie recommendation web app. Content-based filtering + IMDb review sentiment analysis. Built with Flask, scikit-learn, TF-IDF.
 
 ## Live Site
 
-**https://chirag127.github.io/cinesense/**
+**https://cinesense.oriz.in**
 
 ## Features
 
